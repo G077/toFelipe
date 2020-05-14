@@ -167,13 +167,19 @@ if(acu < 0 )
 acu=acu*-1;
 
 // FIM DO NACO
- t_init=time(NULL);
+ 
+ 
+ 
+ 
+ 
+clock_t t;
+
+t=clock();
 
 ac=0;
 qual( &raiz,acu,in );// INCIO DA PESQUISA PESQUISA 
 
-t_fim=time(NULL);
-tempo =difftime( t_fim,t_init );
+t= clock() -t;
 
-printf("tempo de  execuçao em segundos foi =>%.5f\n",tempo);
+printf("tempo de  execuçao de btree  foi =>%lld\n",t);
 }

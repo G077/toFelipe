@@ -48,12 +48,15 @@ void searchbinary(int argv[], char *argc[]){
     acu= (acu * aux[0][i]) -(i+1) ;
     }
 
-    t_init=time(NULL);
+    clock_t t;
+
+    t=clock();
+
    int posicao=funcao(0,1023,0,vetor,acu);// passando a 'VARIAVEL GLOBAL' ->VETOR  DECLARADA NO ARQUIVO QUICKSORT QUE E 'VARIAVEL GLOBAL ARRAY' DO ARQUIVO ARQUIVANDO.C ORDENADA.  
-    t_fim=time(NULL);
+    t= clock() -t;
     
   
     printf("A palavra '%s' possui no texto e repitiu %lld vezes e total foi = %d \n",words[posicao],ordenacao[posicao],repitou);
   
-   printf("Search binary tempo de  execuçao em segundos foi =>%.5f\n",tempo);
+   printf("tempo de  execuçao de pesquisaBinaria  foi =>%lld\n",t);
 }

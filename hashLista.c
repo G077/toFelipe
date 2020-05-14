@@ -69,15 +69,16 @@ for(int i=0;in[i]!=0;i++){
 if(acu < 0 )
 acu=acu*-1;
 
-t_init=time(NULL);
+clock_t t;
+
+t=clock();
 po=0;
 pega( acu %1024 , in );
 
-t_fim=time(NULL);
-tempo =difftime( t_fim,t_init );
+t= clock() -t;
 
 
-printf("tempo de  execuçao em segundos foi =>%.5f\n",tempo);
+printf("tempo de  execuçao de hashAberta  foi =>%lld\n",t);
 
 }
 

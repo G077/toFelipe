@@ -24,7 +24,10 @@ if(acu < 0 )
 acu=acu*-1;
 
 
-t_init=time(NULL);
+clock_t t;
+
+t=clock();
+
 for(i=0;i<1024 ;i++){
   if( acu == array[i] ){
   printf("A palavra '%s' possui no texto e repitiu %d vezes e total foi = %d \n",test[i],contador[i], i+1 );
@@ -32,11 +35,9 @@ for(i=0;i<1024 ;i++){
   }
 
 }
-t_fim=time(NULL);
-tempo =difftime( t_fim,t_init );
+t= clock() -t;
 
-
-printf("tempo de  execuçao em segundos foi =>%.5f\n",tempo);
+printf("tempo de  execuçao de pesqsequencial  foi =>%lld\n",t);
 
 }
 

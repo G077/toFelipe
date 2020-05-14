@@ -134,14 +134,15 @@ for(int i=0;in[i]!=0;i++){
 if(acu < 0 )
 acu=acu*-1;
 
- t_init=time(NULL);
+clock_t t;
+
+t=clock();
 
 pega1( acu %1024 , in ,contador[a] );
 
-t_fim=time(NULL);
-tempo =difftime( t_fim,t_init );
+t= clock() -t;
 
-printf("tempo de  execuçao em segundos foi =>%.5f\n",tempo);
+printf("tempo de  execuçao de Hashfechada  foi =>%lld\n",t);
 
 
 
